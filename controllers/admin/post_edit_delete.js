@@ -5,7 +5,7 @@ import { setting, secret_key, myredis } from 'setting';
 import { verify } from "jwt";
 import postdb from "../../models/post.ts";
 
-
+//
 class PostEditDelete{
     async editDeletePost(req, ctx){
         const cookies = getCookies(req.headers);
