@@ -1,4 +1,4 @@
-// controllers/admin/post.ts
+// controllers/admin/post.js
 
 import { getCookies, deleteCookie } from "cookies";
 import { setting, secret_key, myredis } from 'setting';
