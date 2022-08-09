@@ -35,13 +35,13 @@ function IndexJsx(props){
               <div class="title">{props.data.setting.page_title}</div>
               <form action="/admin/search" method="post">
                 <select name="admin_search">
-                  <option>ការផ្សាយ</option>
-                  <option>សៀវភៅ</option>
+                  <option>posts</option>
+                  <option>books</option>
                 </select>
                 <input type="text" name="admin_q" required placeholder="Search" />
-                <input type="submit" value="ស្វែងរក" />
+                <input type="submit" value="Search" />
               </form>
-              <div class="logout"><span>{props.data.setting.username}</span> | <a href="/">ទំព័រ​មុខ</a> | <a href="/logout">ចេញ​ក្រៅ</a></div>
+              <div class="logout"><span>{props.data.setting.username}</span> | <a href="/">Home</a> | <a href="/logout">Logout</a></div>
           </div>
         </header>
 
@@ -49,19 +49,19 @@ function IndexJsx(props){
           <div class="sidebar">
             <div class="inner">
               <a href="/admin"><img src="/images/movie.png" /></a>
-              <a href="/admin">ការផ្សាយ</a>
+              <a href="/admin">Post</a>
 
               <a href="/admin/book"><img src="/images/books.png" /></a>
-              <a href="/admin/book">សៀវភៅ</a>
+              <a href="/admin/book">Book</a>
 
               <a href="/admin/category"><img src="/images/category.png" /></a>
-              <a href="/admin/category">ជំពូក</a>
+              <a href="/admin/category">Category</a>
 
               <a href="/admin/upload"><img src="/images/upload.png" /></a>
               <a href="/admin/upload">Upload</a>
 
               <a href="/admin/user"><img src="/images/users.png" /></a>
-              <a href="/admin/user">អ្នក​ប្រើប្រាស់</a>
+              <a href="/admin/user">User</a>
 
               <a href="/admin/setting"><img src="/images/setting.png" /></a>
               <a href="/admin/setting">Setting</a>
@@ -73,7 +73,7 @@ function IndexJsx(props){
         </div>
 
         <div class="footer region">
-          <div class="info">សរុប​ទាំងអស់​មាន​ចំនួនៈ {props.data.setting.count}</div>
+          <div class="info">Total number of ites: {props.data.setting.count}</div>
           <ul class="list">
               { listItems }
           </ul>
