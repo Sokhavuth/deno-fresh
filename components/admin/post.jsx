@@ -30,7 +30,7 @@ function PostJsx(props){
                 <input type="text" name="thumb" value="${item.thumb}" required 
                 placeholder="Thumbnail" />
                 <input type="datetime-local" value="${item.date}" name="datetime" required />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Publish" />
                 <input type="hidden" name="videos" value='${item.videos}' />
             </div>
           </form>
@@ -78,7 +78,7 @@ function PostJsx(props){
                 </select>
                 <input type="text" name="thumb" required placeholder="Thumbnail" />
                 <input type="datetime-local" name="datetime" required />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Publish" />
                 <input type="hidden" name="videos" value="" />
             </div>
           </form>
