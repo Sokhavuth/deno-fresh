@@ -16,7 +16,7 @@ class Post{
                 const payload = await verify(jwt, secret_key, "HS512");
                 if(payload.user){
                     const config = setting();
-                    config.page_title = "ទំព័រ​ការផ្សាយ";
+                    config.page_title = "Post page";
                     config.username = payload.user.title;
                     config.count = await postdb.count();
                     config.items = await postdb.getPosts(config.post_amount);
@@ -26,7 +26,7 @@ class Post{
             }catch(error){
                 console.log(error);
                 const config = setting();
-                config.page_title = "ទំព័រ​ចុះ​ឈ្មោះ";
+                config.page_title = "Login page";
                 const resp = new Response();
                 deleteCookie(resp.headers, "session_id");
                 return new Response(undefined, { headers: {location: `/login`}, status: 302 });

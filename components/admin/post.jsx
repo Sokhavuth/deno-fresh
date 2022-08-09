@@ -15,22 +15,22 @@ function PostJsx(props){
           <form action="/admin/post/edit/${item.id}" name="form" method="post" 
           onSubmit="submitForm(event)">
             <input type="text" name="title" value="${item.title}" required 
-            placeholder="ចំណង​ជើង" />
+            placeholder="Post title" />
             <textarea id="editor" name="content" >${item.content}</textarea>
             <input type="text" name="categories" value="${item.categories.toString()}" required 
-            placeholder="បណ្តា​ជំពូក" />
+            placeholder="Categories" />
             <div class="wrapper"> 
                 <select id="category" onChange="getCategory()">
-                  <option>ជ្រើសរើស​ជំពូក</option>
+                  <option>Select a category</option>
                   <option>News</option>
                   <option>Movie</option>
                   <option>Entertainment</option>
                   <option>Sport</option>
                 </select>
                 <input type="text" name="thumb" value="${item.thumb}" required 
-                placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
+                placeholder="Thumbnail" />
                 <input type="datetime-local" value="${item.date}" name="datetime" required />
-                <input type="submit" value="បញ្ជូន" />
+                <input type="submit" value="Submit" />
                 <input type="hidden" name="videos" value='${item.videos}' />
             </div>
           </form>
@@ -53,10 +53,10 @@ function PostJsx(props){
         }
   
         if($('.viddata div').html() === ''){
-          $('.viddata div').append('<b>ប្រភេទ​</b>')
-          $('.viddata div').append('<b>អត្តសញ្ញាណ​</b>')
-          $('.viddata div').append('<b>ស្ថានភាព</b>')
-          $('.viddata div').append('<b>ភាគ/លុប</b>')
+          $('.viddata div').append('<b>Type​</b>')
+          $('.viddata div').append('<b>Video id​</b>')
+          $('.viddata div').append('<b>Status</b>')
+          $('.viddata div').append('<b>Part/Delete</b>')
         }
       
         $('.viddata div:eq(0)' ).after(html)
@@ -65,20 +65,20 @@ function PostJsx(props){
   }else{
       editor = `
           <form action="/admin/post" name="form" method="post" onSubmit="submitForm(event)">
-            <input type="text" name="title" required placeholder="ចំណង​ជើង" />
+            <input type="text" name="title" required placeholder="Post title" />
             <textarea id="editor" name="content"></textarea>
-            <input type="text" name="categories" required placeholder="បណ្តា​ជំពូក" />
+            <input type="text" name="categories" required placeholder="Categories" />
             <div class="wrapper"> 
                 <select id="category" onChange="getCategory()">
-                  <option>ជ្រើសរើស​ជំពូក</option>
+                  <option>Slect a category</option>
                   <option>News</option>
                   <option>Movie</option>
                   <option>Entertainment</option>
                   <option>Sport</option>
                 </select>
-                <input type="text" name="thumb" required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
+                <input type="text" name="thumb" required placeholder="Thumbnail" />
                 <input type="datetime-local" name="datetime" required />
-                <input type="submit" value="បញ្ជូន" />
+                <input type="submit" value="Submit" />
                 <input type="hidden" name="videos" value="" />
             </div>
           </form>
@@ -106,14 +106,14 @@ function PostJsx(props){
                 <option>Facebook</option>
                 <option>OK</option>
               </select>
-              <input type="text" name="videoid" required placeholder="អត្តសញ្ញាណ​វីដេអូ" />
+              <input type="text" name="videoid" required placeholder="Video id" />
               <select name="status">
-                <option>ចប់</option>
-                <option>នៅ​មាន​ត</option>
-                <option>~ ចប់</option>
+                <option>Ending</option>
+                <option>To be continied</option>
+                <option>~ Ending</option>
               </select>
               <div dangerouslySetInnerHTML={{__html: `
-                  <input onclick="genJson()" type="submit" value="បញ្ចូល​វីដេអូ" />
+                  <input onclick="genJson()" type="submit" value="Insert video" />
               `}} />
           </div>
 
