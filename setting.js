@@ -19,7 +19,7 @@ const secret_key = Deno.env.get("SECRET_KEY");
 import { MongoClient } from "mongodb";
 const client = await new MongoClient();
 await client.connect(Deno.env.get('DATABASE_URI'));
-const mymongo = client.database(Deno.env.get('DB_NAME'));
+const mydb = client.database(Deno.env.get('DB_NAME'));
  
  
 import { connect } from "redis"
@@ -30,4 +30,4 @@ const myredis = await connect({
 });
 
 
-export { setting, secret_key, mymongo, myredis }
+export { setting, secret_key, mydb, myredis }
