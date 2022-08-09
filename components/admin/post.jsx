@@ -53,8 +53,8 @@ function PostJsx(props){
         }
   
         if($('.viddata div').html() === ''){
-          $('.viddata div').append('<b>Type​</b>')
-          $('.viddata div').append('<b>Video id​</b>')
+          $('.viddata div').append('<b>Type</b>')
+          $('.viddata div').append('<b>Video id</b>')
           $('.viddata div').append('<b>Status</b>')
           $('.viddata div').append('<b>Part/Delete</b>')
         }
@@ -109,7 +109,7 @@ function PostJsx(props){
               <input type="text" name="videoid" required placeholder="Video id" />
               <select name="status">
                 <option>Ending</option>
-                <option>To be continied</option>
+                <option>Continue</option>
                 <option>~ Ending</option>
               </select>
               <div dangerouslySetInnerHTML={{__html: `
