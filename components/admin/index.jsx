@@ -48,8 +48,8 @@ function IndexJsx(props){
         <div class="main region">
           <div class="sidebar">
             <div class="inner">
-              <a href="/admin"><img src="/images/movie.png" /></a>
-              <a href="/admin">Post</a>
+              <a href="/admin/post"><img src="/images/movie.png" /></a>
+              <a href="/admin/post">Post</a>
 
               <a href="/admin/book"><img src="/images/books.png" /></a>
               <a href="/admin/book">Book</a>

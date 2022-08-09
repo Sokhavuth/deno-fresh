@@ -1,13 +1,12 @@
-// routes/admin/post/[name]/[id].tsx
+// routes/admin/post/[name]/[id].jsx
 
 /** @jsx h */
 import { h } from "preact";
-import { Handlers, PageProps } from "$fresh/server.ts";
 import VPost from '../../../../components/admin/post.jsx';
-import CPost from "../../../../controllers/admin/post_edit_delete.ts";
+import CPost from "../../../../controllers/admin/post_edit_delete.js";
 
 
-export const handler: Handlers = {
+export const handler = {
     async GET(req, ctx){
         return await CPost.editDeletePost(req, ctx);
     },
@@ -19,7 +18,7 @@ export const handler: Handlers = {
 }
 
 
-export default function Template(props: PageProps) {
+export default function Template(props) {
     return (
         <VPost data={props.data} />
     )
