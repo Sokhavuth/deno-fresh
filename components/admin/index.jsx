@@ -73,7 +73,7 @@ function IndexJsx(props){
         </div>
 
         <div class="footer region">
-          <div class="info">Total number of ites: {props.data.setting.count}</div>
+          <div class="info">Total number of items: {props.data.setting.count}</div>
           <ul class="list">
               { listItems }
           </ul>

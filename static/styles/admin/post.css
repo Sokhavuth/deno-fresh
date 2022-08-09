@@ -19,6 +19,10 @@
     padding: 2px 5px;
 }
 
+.Index .main .content .wrapper div input{
+    height: 100%;
+}
+
 .Index .main .content form .submit{
     background: lavender;
     text-align: center;
