@@ -10,7 +10,7 @@ function LoginJsx(props){
       <section class="Login" >
           <link rel="stylesheet" href="/styles/front/login.css" />
           <div class="wrapper">
-              <div class="title">Login into the Dashboard</div>
+              <div class="title">Log into the Dashboard</div>
               <form action="/login" method="post" >
                   <a>Email:</a><input type="email" name="email" value="guest@khmerweb.app" 
                       required />
