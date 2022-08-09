@@ -60,10 +60,10 @@ const genJson = () => {
         html = `<div>${html}</div>`
         
         if($('.viddata div').html() === ''){
-            $('.viddata div').append('<b>ប្រភេទ​</b>')
-            $('.viddata div').append('<b>អត្តសញ្ញាណ​</b>')
-            $('.viddata div').append('<b>ស្ថានភាព</b>')
-            $('.viddata div').append('<b>ភាគ/លុប</b>')
+            $('.viddata div').append('<b>Type​</b>')
+            $('.viddata div').append('<b>Video id​</b>')
+            $('.viddata div').append('<b>Status</b>')
+            $('.viddata div').append('<b>Part/Delete</b>')
         }
         
         $('.viddata div:eq(0)' ).after(html)
