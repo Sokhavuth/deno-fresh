@@ -12,7 +12,7 @@ export const handler = {
   },  
 
   async POST(req, ctx){
-      //return await CPost.createPost(req, ctx);
+      return await CPost.createPost(req, ctx);
   },
 }
 
