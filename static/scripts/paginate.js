@@ -20,7 +20,7 @@ function appendItem(items, route,data){
     let html = ''
     
     if(items){
-        for(let item of items){
+        for(const item of items){
             html += `<li>`
                 html += `<div class='thumb'>`
                     html += `<a href="/${data.type}/${item.id}">
