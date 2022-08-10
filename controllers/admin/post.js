@@ -18,6 +18,7 @@ class Post{
                     const config = setting();
                     config.page_title = "Post page";
                     config.username = payload.user.title;
+                    config.route = "/admin/post";
                     config.count = await postdb.count();
                     config.items = await postdb.getPosts(config.post_amount);
                     

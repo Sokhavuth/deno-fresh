@@ -5,6 +5,7 @@ function setting(){
         site_title: "Multimedia",
         page_title: "Home",
         message: "",
+        post_amount: 6,
     }
 
     return configure

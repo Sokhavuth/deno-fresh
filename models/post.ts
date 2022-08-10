@@ -86,6 +86,11 @@ class Post{
         await posts.deleteOne({id: post_id})
     }
 
+    async paginatePosts(amount: number, page: number){
+        const posts = mydb.collection<PostSchema>("posts")
+        return await posts.find().skip(amount*page).sort({date:-1,_id:-1}).limit(amount).toArray();
+    }
+
 }
 
 export default new Post()

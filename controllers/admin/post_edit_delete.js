@@ -5,7 +5,7 @@ import { setting, secret_key, myredis } from 'setting';
 import { verify } from "jwt";
 import postdb from "../../models/post.ts";
 
-//
+
 class PostEditDelete{
     async editDeletePost(req, ctx){
         const cookies = getCookies(req.headers);
@@ -18,6 +18,7 @@ class PostEditDelete{
                     config.page_title = "កែប្រែ​ការផ្សាយ";
                     config.username = payload.user.title;
                     config.count = await postdb.count();
+                    config.route = "/admin/post";
                 
                     if(ctx.params.name === 'edit'){
                         config.item = await postdb.getPost(ctx.params.id);

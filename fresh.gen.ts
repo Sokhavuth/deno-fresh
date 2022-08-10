@@ -6,9 +6,10 @@ import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/admin/post.jsx";
 import * as $2 from "./routes/admin/post/[name]/[id].jsx";
 import * as $3 from "./routes/api/joke.ts";
-import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/login.jsx";
-import * as $6 from "./routes/logout.jsx";
+import * as $4 from "./routes/api/paginate/[page].js";
+import * as $5 from "./routes/index.tsx";
+import * as $6 from "./routes/login.jsx";
+import * as $7 from "./routes/logout.jsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -17,9 +18,10 @@ const manifest = {
     "./routes/admin/post.jsx": $1,
     "./routes/admin/post/[name]/[id].jsx": $2,
     "./routes/api/joke.ts": $3,
-    "./routes/index.tsx": $4,
-    "./routes/login.jsx": $5,
-    "./routes/logout.jsx": $6,
+    "./routes/api/paginate/[page].js": $4,
+    "./routes/index.tsx": $5,
+    "./routes/login.jsx": $6,
+    "./routes/logout.jsx": $7,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

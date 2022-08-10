@@ -30,6 +30,7 @@ function IndexJsx(props){
     return(
         <section class="Index" >
             <link rel="stylesheet" href="/styles/admin/index.css" />
+            <script src="/scripts/paginate.js"></script>
         <header>
           <div class="inner region">
               <div class="title">{props.data.setting.page_title}</div>
@@ -73,11 +74,14 @@ function IndexJsx(props){
         </div>
 
         <div class="footer region">
-          <div class="info">Total number of items: {props.data.setting.count}</div>
+          <div class="info">Total amount of items: {props.data.setting.count}</div>
           <ul class="list">
               { listItems }
           </ul>
-          <div class="pagination"><img src="/images/load-more.png" /></div>
+          <div class="pagination" dangerouslySetInnerHTML={{__html: `
+              <img onclick="paginate('${props.data.setting.route}')" src="/images/load-more.png" />
+          `}}/>
+            
           <div class="credit">&copy; <a href="https://khmerweb.vercel.app/">Khmer Web 2022</a></div>
         </div>
         </section>

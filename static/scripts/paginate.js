@@ -2,13 +2,18 @@
 
 let page = 0
 
-function paginate(route){
+async function paginate(route){
     $('.pagination img').attr('src', '/images/loading.gif')
     page += 1
     
-    $.post(`${route}/paginate`,{page:page},function(data, status){
-        appendItem(data.items,route,data)
-    })
+    const resp = await fetch(`http://localhost:8000/api/paginate/${page}`);
+    if (resp.status === 404) {
+        alert('no post');
+        return;
+    }
+    
+    const data = await resp.json();
+    appendItem(data.items, route, data);
 }
 
 function appendItem(items, route,data){
@@ -27,7 +32,7 @@ function appendItem(items, route,data){
                 html += `</div>`
                 html += `<div class="title">`
                     html += `<a href="/${data.type}/${item.id}">${item.title}</a>`
-                    html += `<div>${new Date(item.postdate).toLocaleDateString('it-IT')}</div>`
+                    html += `<div>${new Date(item.date).toLocaleDateString('it-IT')}</div>`
                 html += `</div>`
                 html += `<div class="edit">`
                     html += `<a href="${route}/edit/${item.id}"><img src="/images/edit.png"/></a>`
