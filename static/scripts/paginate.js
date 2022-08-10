@@ -6,7 +6,7 @@ async function paginate(route){
     $('.pagination img').attr('src', '/images/loading.gif')
     page += 1
     
-    const resp = await fetch(`http://localhost:8000/api/paginate/${page}`);
+    const resp = await fetch(`/api/paginate/${page}`);
     if (resp.status === 404) {
         alert('no post');
         return;
