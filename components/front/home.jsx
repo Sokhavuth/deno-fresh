@@ -4,8 +4,25 @@
 import { h } from "preact";
 import Base from "../base.jsx";
  
-function HomeJsx(props){
-    
+
+function HomeJsx(props){ 
+    const items = props.data.setting.items;
+    const listItems = items.map((item) =>
+    <li>
+      <a class="thumb" href={`/post/${item.id}`}>
+        <img src={item.thumb} />
+        {((item.videos !== "" )&&(item.videos !== "[]")) &&
+          <img class="play-icon" src={`/images/play.png`} />
+        }
+      </a>
+      <div class="title">
+        <a href={`/post/${item.id}`}>{item.title}</a>
+        <div class="date">{(new Date(item.date)).toLocaleDateString('it-IT')}</div>
+        <div class="text" dangerouslySetInnerHTML={{ __html: `${ item.content }` }} />
+      </div>
+    </li>
+    )
+
     return(
         <section class="Home">
             <link href="/styles/front/home.css" rel="stylesheet" />
@@ -36,11 +53,18 @@ function HomeJsx(props){
                         <a href="#news">News</a>
                         <a href="#contact">Contact</a>
                         <a href="#about">About</a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
                             <i class="fa fa-bars"></i>
                         </a>
                     `}}/>
                 </div>
+            </div>
+            <link rel="stylesheet" href="styles/front/main.css" />
+            <div class="main region">
+                <div class="content">
+                    <ul> { listItems } </ul>
+                </div>
+                <div class="sidebar">Sidebar</div>
             </div>
         </section>
     )

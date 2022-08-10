@@ -6,6 +6,7 @@ function setting(){
         page_title: "Home",
         message: "",
         post_amount: 6,
+        homePostAmount: 12,
     }
 
     return configure

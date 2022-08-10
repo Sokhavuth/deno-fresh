@@ -2,22 +2,20 @@
  
 /** @jsx h */
 import { h } from "preact";
-import { setting } from "setting";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Home from '../components/front/home.jsx';
+import VHome from '../components/front/home.jsx';
+import CHome from "../controllers/front/home.js";
  
  
 export const handler: Handlers = {
   async GET(req, ctx) {
-    const config = setting();
-    config.message = "Welcome to Fresh framework!";
-    return await ctx.render({ "setting": config });
+      return await CHome.getPosts(req, ctx);
   },
 }
  
  
 export default function Template(props: PageProps){
   return (
-    <Home data={props.data} />
+    <VHome data={props.data} />
   )
 }

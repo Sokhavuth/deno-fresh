@@ -27,6 +27,7 @@ function IndexJsx(props){
       </div>
     </li>
     )
+    
     return(
         <section class="Index" >
             <link rel="stylesheet" href="/styles/admin/index.css" />

@@ -1,0 +1,84 @@
+/* static/styles/front/main.css */
+
+.Home .main{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 70% calc(30% - 15px);
+    grid-gap: 15px;
+    padding-bottom: 30px;
+}
+
+.Home .main .content,
+.Home .main .sidebar{
+    background: white;
+    padding: 20px;
+}
+
+.Home .main .content ul{
+    list-style-type: none;
+}
+
+.Home .main .content ul li{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin-bottom: 20px;
+    background: rgb(243, 243, 243);
+}
+
+.Home .main .content ul li:last-child{
+    margin-bottom: 0;
+}
+
+.Home .main .content ul li .thumb{
+    position: relative;
+    padding-top: 56.25%
+}
+
+.Home .main .content ul li .thumb img{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Home .main .content ul li .thumb .play-icon{
+    width: 20%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Home .main .content ul li .title{
+    padding: 5px 10px;
+}
+
+.Home .main .content ul li .title a{
+    font: 22px/1.5 Oswald, Limonf3;
+    padding-bottom: 5px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.Home .main .content ul li .title .text{
+    padding-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px){
+    .Home .main{
+        grid-template-columns: 100%;
+    }
+
+    .Home .main .content ul li{
+        grid-template-columns: 100%;
+    }
+}
