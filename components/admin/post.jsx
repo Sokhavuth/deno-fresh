@@ -108,9 +108,9 @@ function PostJsx(props){
               </select>
               <input type="text" name="videoid" required placeholder="Video id" />
               <select name="status">
-                <option>Ending</option>
-                <option>Continue</option>
-                <option>~ Ending</option>
+                <option>end</option>
+                <option>continue</option>
+                <option>~ end</option>
               </select>
               <div dangerouslySetInnerHTML={{__html: `
                   <input onclick="genJson()" type="submit" value="Insert video" />

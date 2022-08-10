@@ -59,7 +59,7 @@ function HomeJsx(props){
                     `}}/>
                 </div>
             </div>
-            <link rel="stylesheet" href="styles/front/main.css" />
+            <link rel="stylesheet" href="/styles/front/main.css" />
             <div class="main region">
                 <div class="content">
                     <ul> { listItems } </ul>

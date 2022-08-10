@@ -1,0 +1,56 @@
+/* static/styles/front/post.css */
+
+.Home .main .content .post .title{
+    padding-bottom: 15px;
+}
+
+.Home .main .content .post .date{
+    padding-bottom: 30px;
+}
+
+.Home .main .content .post .video{
+    background: var(--background);
+}
+
+.Home .main .content .post .video .screen div{
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.Home .main .content .post .video .screen div iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Home .main .content .post .video .playlist{
+    max-height: 405px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.Home .main .content .post .video .playlist .part{
+    text-align: left;
+    padding: 10px;
+    color: black;
+    display: block;
+    height: auto;
+    border: 1px solid black;
+    border-top: none;
+    font-size: 16px;
+}
+
+.Home .main .content .post .video .playlist .part:last-child{
+    margin-bottom: 0;
+}
+
+.Home .main .content .post .video .playlist .part:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.Home .main .content .post article img{
+    width: 100%;
+}
