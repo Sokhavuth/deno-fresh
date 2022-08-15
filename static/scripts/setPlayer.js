@@ -1,4 +1,4 @@
-//asset/js/setPlayer.js
+// static/scripts/setPlayer.js
 
 function setScreen(entry,id,click){
     if(entry['type'] == 'OK'){
