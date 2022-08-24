@@ -43,7 +43,7 @@ function IndexJsx(props){
                 <input type="text" name="admin_q" required placeholder="Search" />
                 <input type="submit" value="Search" />
               </form>
-              <div class="logout"><span>{props.data.setting.username}</span> | <a href="/">Home</a> | <a href="/logout">Logout</a></div>
+              <div class="logout"><span>{props.data.setting.username}</span> | <a href="/">Home</a> | <a href="#">Logout</a></div>
           </div>
         </header>
 
